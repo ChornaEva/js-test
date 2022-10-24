@@ -257,18 +257,110 @@
 //   }
 
 //   foo();
-function checkStorage(available, ordered) {
-  let message;
 
-  if (ordered === 0) {
-    message = "Your order is empty!";
-  } else if (ordered > available) {
-    message = "Your order is too large, not enough goods in stock!";
-  } else {
-    message = "The order is accepted, our manager will contact you";
-  }
+// function checkStorage(available, ordered) {
 
-  return message;
-}
+//   if (ordered === 0) {
+//     return "Your order is empty!";
+//   }
+//   if (ordered > available) {
+//     return "Your order is too large, not enough goods in stock!";
+//   }
+//   return "The order is accepted, our manager will contact you";
+// }
+// console.log(checkStorage(100, 50));
+// ****
+// function getExtremeElements(array) {
+//   const newArray = [];
 
-checkStorage(100, 50);
+//   const firstElement = array.splice(0, 1);
+//   // console.log(firstElement);
+//   const lastElement = array.splice(array.length - 1, 1);
+//   // console.log(lastElement);
+//   newArray.push(...firstElement, ...lastElement);
+//   return newArray;
+// }
+// getExtremeElements([1, 2, 3, 4, 5]);
+// getExtremeElements(["Earth", "Mars", "Venus"]);
+// getExtremeElements(["apple", "peach", "pear", "banana"]);
+
+// console.log(getExtremeElements(["Earth", "Mars", "Venus"]));
+// console.log(getExtremeElements([1, 2, 3, 4, 5]));
+// console.log(getExtremeElements(["apple", "peach", "pear", "banana"]));
+
+// ***
+// function calculateEngravingPrice(message, pricePerWord) {
+//   let totalPrice;
+
+//   const splitMessage = message.split(" ");
+//   console.log(splitMessage);
+//   const quontityWords = splitMessage.length;
+//   console.log(quontityWords);
+//   totalPrice = quontityWords * pricePerWord;
+//   console.log(totalPrice);
+//   return totalPrice;
+// }
+
+// calculateEngravingPrice("JavaScript is in my blood", 10);
+// ***
+
+// function slugify(title) {
+//   let newTitle;
+//   const normalisedTitle = title.toLowerCase();
+//   console.log(normalisedTitle);
+//   const splitMessage = normalisedTitle.split(" ");
+//   console.log(splitMessage);
+//   const joinMessage = splitMessage.join('-');
+//   console.log(joinMessage);
+// }
+// slugify("Arrays for begginers");
+
+// ****
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+// const firstTwoEls = fruits.slice(0,2);
+// console.log(firstTwoEls);
+// const nonExtremeEls = fruits.slice(1, -1);
+// console.log(nonExtremeEls);
+// const lastThreeEls = fruits.slice(-3);
+// console.log(lastThreeEls);
+
+// *****
+// function makeArray(firstArray, secondArray, maxLength) {
+//   const newArray = firstArray.concat(secondArray);
+//   console.log('newArray: ', newArray);
+
+//   if (newArray.length > maxLength) {
+//     const sliceArray = newArray.slice(0, maxLength);
+//     console.log('sliceArray: ', sliceArray);
+//     return sliceArray;
+//   } else {
+//     return newArray;
+//   }
+// }
+
+// makeArray(["Mango", "Poly"], ["Ajax", "Chelsea"], 3);
+
+// ****
+// function calculateTotal(number) {
+//   let sum = 0;
+//   for (let i = 0; i <= number; i += 1) {
+//     // console.log(i);
+//     sum = sum + i;
+//     console.log(sum);
+//   }
+//   return sum;
+// }
+// calculateTotal(24);
+
+// ****
+// Доповни код циклу for таким чином, щоб він послідовно логував усі елементи масиву fruits.
+
+const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+console.log(fruits[0]);
+console.log(fruits[fruits.length-1]);
+
+for (let i = 0; i<=fruits.length-1; i+=1) { 
+  const fruit = fruits[i];
+  console.log(fruit);
+};
