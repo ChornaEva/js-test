@@ -355,12 +355,114 @@
 // ****
 // Доповни код циклу for таким чином, щоб він послідовно логував усі елементи масиву fruits.
 
-const fruits = ['apple', 'plum', 'pear', 'orange'];
+// const fruits = ['apple', 'plum', 'pear', 'orange'];
 
-console.log(fruits[0]);
-console.log(fruits[fruits.length-1]);
+// console.log(fruits[0]);
+// console.log(fruits[fruits.length-1]);
 
-for (let i = 0; i<=fruits.length-1; i+=1) { 
-  const fruit = fruits[i];
-  console.log(fruit);
-};
+// for (let i = 0; i<fruits.length; i+=1) {
+//   const fruit = fruits[i];
+//   console.log(fruit);
+// };
+
+// ****
+// Напиши функцію calculateTotalPrice(order), яка приймає один параметр order - масив чисел, і обчислює загальну суму його елементів. Загальна сума елементів повинна зберігатися у змінній total, яка повертається як результат роботи функції.
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+//   // console.log('order: ', order);
+
+//   for (let i = 0; i < order.length; i += 1) {
+//     // console.log(order.length);
+//     total = total + order[i];
+//     console.log(total);
+//   }
+//   return total;
+// }
+
+// calculateTotalPrice([12, 85, 37, 4]);
+
+// *******
+// Напиши функцію findLongestWord(string), яка приймає довільний рядок, що складається тільки зі слів, розділених пробілом (параметр string), і повертає найдовше слово в цьому рядку.
+
+// function findLongestWord(string) {
+//   let longestWord = "";
+//   const splitString = string.split(" ");
+//   // console.log(splitString);
+
+//   for (let i = 0; i < splitString.length; i += 1) {
+//     // console.log(splitString[i]);
+//     if (splitString[i].length > longestWord.length) {
+//       longestWord = splitString[i];
+//     }
+//   }
+//   return longestWord;
+// }
+// findLongestWord("The quick brown fox jumped over the lazy dog");
+
+// ******
+// Доповни код функції createArrayOfNumbers(min, max) таким чином, щоб вона повертала масив усіх цілих чисел від значення min до max.
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
+
+//   for (let i = min; i <= max; i += 1) {
+//     numbers.push(i);
+//   }
+//   return numbers;
+//   console.log(numbers);
+// }
+// createArrayOfNumbers(29, 34);
+
+// *****
+// Напиши функцію filterArray(numbers, value), яка приймає масив чисел (параметр numbers) і повертає новий масив, в якому будуть тільки ті елементи масиву numbers, які більші за значення параметра value (число).
+// function filterArray(numbers, value) {
+//   const newArray = [];
+
+//   console.log(numbers);
+//   console.log(numbers.length);
+
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     console.log(numbers[i]);
+
+//     if (numbers[i] > value) {
+//       newArray.push(numbers[i]);
+//     }
+//   }
+//   console.log(newArray);
+//   return newArray;
+// }
+
+// filterArray([12, 24, 8, 41, 76], 38);
+
+// ******
+// Функція checkFruit(fruit) приймає рядок з назвою фрукта (параметр fruit), і перевіряє, чи присутній такий фрукт в масиві fruits.
+// Доповни код функції таким чином, що якщо:
+// фрукт присутній в масиві, то функція повертає true;
+// фрукт відсутній в масиві, то функція повертає false.
+
+// function checkFruit(fruit) {
+//   const fruits = ["apple", "plum", "pear", "orange"];
+//   const includesFruit = fruits.includes(fruit);
+//   console.log(includesFruit);
+//   return includesFruit;
+// }
+
+// checkFruit("plum");
+// checkFruit("mandarin");
+
+// ****
+// Напиши функцію getCommonElements(array1, array2), яка отримує два масиви довільної довжини в параметри array1 і array2, і повертає новий масив, що складається з тих елементів, які присутні в обох вихідних масивах.
+
+// function getCommonElements(array1, array2) {
+//   let newArray = [];
+//   for (let i = 0; i <= array1.length; i += 1) {
+//     if (array2.includes(array1[i])) {
+//       newArray.push(array1[i]);
+//     }
+//   }
+
+//   console.log(newArray);
+//   // return newArray;
+// }
+
+// getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);
