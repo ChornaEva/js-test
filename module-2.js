@@ -464,5 +464,63 @@
 //   console.log(newArray);
 //   // return newArray;
 // }
-
 // getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);
+
+// *****
+// function calculateTotalPrice(order) {
+//     let total = 0;
+
+//     for (const stuff of order) {
+//       total += stuff;
+//     }
+//     return total;
+//   }
+
+//   calculateTotalPrice([12, 85, 37, 4]);
+
+// *****
+// function filterArray(numbers, value) {
+//     const filteredNumbers = [];
+
+//     for (const number of numbers) {
+
+//       if (number > value) {
+//         filteredNumbers.push(number);
+//       }
+//     }
+
+//     return filteredNumbers;
+//   }
+//   filterArray([12, 24, 8, 41, 76], 20);
+
+// *****
+// function findNumber(start, end, divisor) {
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//       return i;
+//     }
+//   }
+// }
+// findNumber(16, 35, 7);
+
+// ****
+// function includes(array, value) {
+//   let coincidence = true;
+//   for (const stuff of array) {
+//     coincidence = stuff === value ? true : false;
+//     console.log(coincidence);
+//   }
+//   return coincidence;
+// }
+
+// function includes(array, value) {
+//   for (const stuff of array) {
+//     if (stuff === value) {
+//       return true;
+//     }
+//   }
+//   return false;
+// }
+
+// includes(["Earth", "Mars", "Venus", "Jupiter", "Saturn"], "Jupiter");
+// includes(["apple", "plum", "pear", "orange"], "kiwi");
