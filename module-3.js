@@ -342,3 +342,230 @@
 
 // const averageRating = (totalRating / books.length).toFixed(1);
 // console.log(averageRating);
+
+// ****
+// const temps = [14, -4, 25, 8, 11];
+// console.log(temps);
+// console.log(Math.max(temps));
+// console.log(...temps);
+// console.log(Math.max(...temps));
+
+// const copyOfTemps = [...temps];
+// console.log(copyOfTemps);
+
+// const lastWeekTemps = [14, 25, 11];
+// const currentWeekTemps = [23, 17, 18];
+// const allTemps = [...lastWeekTemps, ...currentWeekTemps];
+// console.log(allTemps);
+
+// ****
+// const first = { propA: 5, propB: 10 };
+// const second = { propC: 15 };
+// const third = { ...first, ...second };
+// console.log(third);
+
+// const first = { propA: 5, propB: 10, propC: 50 };
+// const second = { propC: 15, propD: 20 };
+// const third = { ...first, ...second };
+// console.log(third);
+
+// const fourth = { ...second, ...first };
+// console.log(fourth);
+
+// ****
+// function multiply(...args) {
+//   console.log(args);
+// }
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
+
+// function multiply(firstNumber, secondNumber, ...otherArgs) {
+//   console.log(firstNumber);
+//   console.log(secondNumber);
+//   console.log(otherArgs);
+// }
+// multiply(1, 2);
+// multiply(1, 2, 3);
+// multiply(1, 2, 3, 4);
+
+// *****
+// const book = {
+//   title: "putin huylo",
+//   author: "ukrainians",
+//   genres: ["autobiography", "psychiatry"],
+//   isPublic: true,
+//   rating: 10,
+// };
+
+// const accesType = book.isPublic ? "публічному" : "закритому";
+// const message = `Книга ${book.title} автора ${book.author} з рейтингом ${book.rating} знаходиться в ${accesType} доступі`;
+
+// console.log(message);
+
+// деструктуризуємо
+// const { title, author, genres, isPublic, rating } = book;
+
+// const accesType = book.isPublic ? "публічному" : "закритому";
+// const message = `Книга ${book.title} автора ${book.author} з рейтингом ${book.rating} знаходиться в ${accesType} доступі`;
+
+// console.log(message);
+
+// *****
+// const book = {
+//   title: "putin huylo",
+//   author: "ukrainians",
+//   genres: ["autobiography", "psychiatry"],
+//   isPublic: true,
+//   rating: 10,
+// };
+
+// const {
+//   title,
+//   author,
+//   genres,
+//   isPublic,
+//   rating,
+//   coverImg = "https://via.placeholder.com/640/480",
+// } = book;
+
+// console.log(title);
+// console.log(author);
+// console.log(coverImg);
+
+// ****
+// const firstBook = {
+//   title: "putin huylo",
+//   coverImg: "https://via.placeholder.com/640/480",
+// };
+// const {
+//   title: firstTitle,
+//   coverImg:
+//     firstCoverImg = "https://images-na.ssl-images-amazon.com/images/I/51b5YG6Y1rL.jpg",
+// } = firstBook;
+
+// console.log(firstTitle);
+// console.log(firstCoverImg);
+
+// const secondBook = {
+//   title: "putin pedofile",
+// };
+// const {
+//   title: secondTitle,
+//   coverImg: secondCoverImg = "https://via.placeholder.com/640/480",
+// } = secondBook;
+
+// console.log(secondTitle);
+// console.log(secondCoverImg);
+
+// ****
+// const books = [
+//   { title: "putin huylo", author: "ukrainians", rating: 10 },
+//   { title: "putin pedofile", author: "ukrainians", rating: 10 },
+// ];
+
+// for (const book of books) {
+//   console.log(book.author);
+//   console.log(book.title);
+//   console.log(book.rating);
+// }
+
+// for (const book of books) {
+//   const { author, title, rating } = book;
+//   console.log(title);
+//   console.log(rating);
+//   console.log(author);
+// }
+
+// for (const { author, title, rating } of books) {
+//   console.log(title);
+//   console.log(rating);
+//   console.log(author);
+// }
+
+// ****
+// const user = {
+//   name: "Jacques Gluke",
+//   tag: "jgluke",
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
+
+// const {
+//   name,
+//   tag,
+//   stats: { followers, views: userViews, likes: userLikes = 0 },
+// } = user;
+
+// console.log(name);
+// console.log(tag);
+// console.log(followers);
+// console.log(userViews);
+// console.log(userLikes);
+
+// ****
+// const rgb = [200, 255, 100];
+// const [red, green, blue] = rgb;
+// console.log(`R:${red}, G:${green}, B:${blue}`);
+
+// const rgb = [200, 255, 100];
+// const [red, green, blue, alfa = 0.3] = rgb;
+// console.log(`R:${red}, G:${green}, B:${blue}, Alfa:${alfa}`);
+
+// const rgb = [200, 255, 100];
+// const [red, ...colors] = rgb;
+// console.log(red);
+// console.log(colors);
+
+// ****
+// function doStuffWithBook(title, numberOfPages, downLoads, rating, public) {
+//   console.log(title);
+//   console.log(numberOfPages);
+//   console.log(downLoads);
+//   console.log(rating);
+//   console.log(public);
+// }
+
+// doStuffWithBook("putin-pedofile", 600, 145000, 10, true);
+
+// function doStuffWithBook(book) {
+//   console.log(book.title);
+//   console.log(book.numberOfPages);
+//   console.log(book.downloads);
+//   console.log(book.rating);
+//   console.log(book.isPublic);
+// }
+
+// doStuffWithBook({
+//   title: "The Last Kingdom",
+//   numberOfPages: 736,
+//   downloads: 10283,
+//   rating: 8.38,
+//   isPublic: true,
+// });
+
+// function doStuffWithBook(book) {
+//   const { title, numberOfPages, downloads, rating, isPublic } = book;
+//   console.log(title);
+//   console.log(numberOfPages);
+//   console.log(downloads);
+//   console.log(rating);
+//   console.log(isPublic);
+// }
+
+// function doStuffWithBook({
+//   title,
+//   numberOfPages,
+//   downloads,
+//   rating,
+//   isPublic,
+// }) {
+//   console.log(title);
+//   console.log(numberOfPages);
+//   console.log(downloads);
+//   console.log(rating);
+//   console.log(isPublic);
+// }
