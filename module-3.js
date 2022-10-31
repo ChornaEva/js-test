@@ -569,3 +569,105 @@
 //   console.log(rating);
 //   console.log(isPublic);
 // }
+// ****
+// const keys = [];
+// const values = [];
+// const advert = {
+//   service: "apt",
+// };
+// const apartment = Object.create(advert);
+// apartment.descr = "Spacious apartment in the city center";
+// apartment.rating = 4;
+// apartment.price = 2153;
+
+// for (const key in apartment) {
+//   if (apartment.hasOwnProperty(key)) {
+//     keys.push(key);
+//     values.push(apartment[key]);
+//   }
+// }
+// ****
+// function countProps(object) {
+//   let propCount = 0;
+
+//   for (const key in object) {
+//     if (object.hasOwnProperty(key)) {
+//       propCount += 1;
+//     }
+//   }
+//   return propCount;
+// }
+// countProps({ name: "Mango", age: 2 });
+
+// ****
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//   const salaryValues = Object.values(salaries);
+
+//   for (const salaryValue of salaryValues) {
+//     totalSalary += salaryValue;
+//   }
+//   return totalSalary;
+// }
+// countTotalSalary({ mango: 100, poly: 150, alfred: 80 });
+
+// ***
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+
+// for (const color of colors) {
+// //   console.log(color);
+//   hexColors.push(color.hex);
+//   rgbColors.push(color.rgb);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+// ****
+// Напиши функцію getProductPrice(productName), яка приймає один параметр productName - назва продукту. Функція шукає об'єкт продукту з таким ім'ям (властивість name) в масиві products і повертає його ціну (властивість price). Якщо продукт з такою назвою не знайдений, функція повинна повертати null.
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+// let productPrice = 0;
+// function getProductPrice(productName) {
+//   for (const product of products) {
+//     if (product.name === productName) {
+//       productPrice = product.price;
+//       return productPrice;
+//     }
+//   }
+//   return null;
+// }
+// getProductPrice("Radar");
+
+// ****
+// Напиши функцію getAllPropValues(propName), яка приймає один параметр propName - ім'я (ключ) властивості. Функція повинна повернути масив всіх значень властивості з таким ім'ям з кожного об'єкта в масиві products. Якщо в об'єктах відсутні властивості з таким ім'ям, функція повинна повернути порожній масив.
+
+// const products = [
+//   { name: "Radar", price: 1300, quantity: 4 },
+//   { name: "Scanner", price: 2700, quantity: 3 },
+//   { name: "Droid", price: 400, quantity: 7 },
+//   { name: "Grip", price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//   const result = [];
+//   for (const product of products) {
+//     if (product.hasOwnProperty(propName)) {
+//       result.push(product[propName]);
+//     }
+//   }
+//   return result;
+// }
+
+// getAllPropValues("quantity");
