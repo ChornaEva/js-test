@@ -1143,8 +1143,8 @@
 //     for (const potion of this.potions) {
 //       if (oldName === potion.name) {
 //         potion.name = newName;
-//         // const potionIndex = this.potions.indexOf(potion);????
-//         // this.potions.splice(potionIndex, 1, newName);???
+//         const potionIndex = this.potions.indexOf(potion);
+//         this.potions.splice(potionIndex, 1, {name:newName, price:potion.price});
 //         return this.potions;
 //       }
 //     }
