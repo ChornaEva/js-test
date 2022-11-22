@@ -234,3 +234,351 @@
 // console.log(phoneticLookup("charlie"));
 
 // ****
+// Змініть функцію checkObj, щоб перевірити чи об'єкт переданий до функції (obj) містить особливу властивість (checkProp). Якщо властивість знайдена, поверніть значення властивості. Якщо ні, поверніть "Not Found".
+// function checkObj(obj, checkProp) {
+//   if (obj.hasOwnProperty(checkProp)) {
+//     return obj[checkProp];
+//   } else {
+//     return "Not Found";
+//   }
+// }
+// console.log(checkObj({ gift: "pony", pet: "kitten", bed: "sleigh" }, "gift"));
+
+// ****
+// Додайте новий альбом до масиву myMusic. Додайте artist та title рядки, release_year число та масив рядків formats.
+// const myMusic = [
+//   {
+//     artist: "Billy Joel",
+//     title: "Piano Man",
+//     release_year: 1973,
+//     formats: ["CD", "8T", "LP"],
+//     gold: true,
+//   },
+// ];
+
+// myMusic.push({
+//   artist: "Radiohead",
+//   title: "Creap",
+//   release_year: 1992,
+//   formats: ["Alternative rock", "grunge", "post-grunge", "pop"],
+// });
+// console.log(myMusic);
+
+// ****
+// Отримайте доступ до myStorage та визначте вміст скрині glove box для змінної gloveBoxContents. Використовуйте точкову нотацію для всіх властивостей, де це можливо, в іншому випадку використовуйте дужки.
+
+// const myStorage = {
+//   car: {
+//     inside: {
+//       "glove box": "maps",
+//       "passenger seat": "crumbs",
+//     },
+//     outside: {
+//       trunk: "jack",
+//     },
+//   },
+// };
+
+// const gloveBoxContents = myStorage.car.inside["glove box"];
+// console.log(gloveBoxContents);
+
+// ****
+// Використовуючи точкову і дужкову нотацію, встановіть змінну secondTree на другий елемент в списку trees з об'єкта myPlants.
+// const myPlants = [
+//     {
+//       type: "flowers",
+//       list: [
+//         "rose",
+//         "tulip",
+//         "dandelion"
+//       ]
+//     },
+//     {
+//       type: "trees",
+//       list: [
+//         "fir",
+//         "pine",
+//         "birch"
+//       ]
+//     }
+//   ];
+
+//   const secondTree = myPlants[1].list[1];
+//   console.log(secondTree);
+
+// ****
+// Ви починаєте з функції updateRecords, яка приймає літерал об'єкту records, який містить колекцію музичного альбому, id, prop (такі як artist чи tracks), і value. Завершіть функцію, використовуючи правила нижче, щоб змінити об'єкт, переданий до функції.
+
+// Ваша функція повинна завжди повертати весь об'єкт збірки записів.
+// Якщо prop це не tracks і value не є пустим рядком, то оновіть або встановіть prop альбому до value.
+// Якщо prop є tracks але альбом немає властивості tracks, створіть пустий масив та додайте value до нього.
+// Якщо prop є tracks та value не є пустим рядком, додайте value до кінця наявного масиву tracks у альбомі.
+// Якщо value є пустим рядком, видаліть дану властивість prop з альбому.
+// Note: Копія об'єкту recordCollection використовується для тестування.
+
+// const recordCollection = {
+//   2548: {
+//     albumTitle: "Slippery When Wet",
+//     artist: "Bon Jovi",
+//     tracks: ["Let It Rock", "You Give Love a Bad Name"],
+//   },
+//   2468: {
+//     albumTitle: "1999",
+//     artist: "Prince",
+//     tracks: ["1999", "Little Red Corvette"],
+//   },
+//   1245: {
+//     artist: "Robert Palmer",
+//     tracks: [],
+//   },
+//   5439: {
+//     albumTitle: "ABBA Gold",
+//   },
+// };
+
+// function updateRecords(records, id, prop, value) {
+//   if (prop !== "tracks" && value !== "") {
+//     records[id][prop] = value;
+//   } else if (
+//     prop === "tracks" &&
+//     records[id].hasOwnProperty("tracks") === false
+//   ) {
+//     records[id][prop] = [value];
+//   } else if (prop === "tracks" && value !== "") {
+//     records[id][prop].push(value);
+//   } else if (value === "") {
+//     delete records[id][prop];
+//   }
+//   return records;
+// }
+// updateRecords(recordCollection, 5439, "artist", "ABBA");
+
+// ****
+// Додайте числа від 5 до 0 (включно) у порядку спадання до myArray, використовуючи цикл while.
+
+// const myArray = [];
+// let i = 5;
+
+// while (i >= 0) {
+//   myArray.push(i);
+//   i -= 1;
+// }
+// console.log(myArray);
+
+// ****
+// Використовуйте for цикл для того, щоб перемістити значення 1 через 5 на myArray.
+// const myArray = [];
+
+// for (let i = 1; i <= 5; i += 1) {
+//   myArray.push(i);
+// }
+
+// console.log(myArray);
+
+// Додайте непарні числа від 1 до 9 до myArray, використовуючи цикл for.
+
+// const myArray = [];
+
+// for (let i = 1; i <= 9; i += 2) {
+//   myArray.push(i);
+// }
+
+// console.log(myArray);
+
+// Додайте непарні числа від 9 до 1 до myArray, використовуючи цикл for.
+// const myArray = [];
+
+// for (let i = 9; i > 0; i -= 2) {
+//   myArray.push(i);
+// }
+// console.log(myArray);
+
+// Оголосіть та ініціалізуйте змінну total до 0. Використовуйте цикл for для додавання значення кожного елементу масиву myArr до total.
+
+// const myArr = [2, 3, 4, 5, 6];
+// let total = 0;
+
+// for (let i = 0; i <= myArr.length - 1; i += 1) {
+//   total += myArr[i];
+// }
+
+// console.log(total);
+
+// Вкладення для циклів
+// const arr = [
+//   [1, 2],
+//   [3, 4],
+//   [5, 6],
+// ];
+
+// for (let i = 0; i < arr.length; i++) {
+//   for (let j = 0; j < arr[i].length; j++) {
+//     console.log(arr[i][j]);
+//   }
+// }
+
+// Змініть функцію multiplyAll для того, щоб повернути добуток усіх чисел у підмасивах arr.
+
+// function multiplyAll(arr) {
+//   let product = 1;
+
+//   for (let i = 0; i < arr.length; i += 1) {
+//     for (let j = 0; j < arr[i].length; j += 1) {
+//       product *= arr[i][j];
+//     }
+//   }
+//   return product;
+// }
+
+// multiplyAll([
+//   [1, 2],
+//   [3, 4],
+//   [5, 6, 7],
+// ]);
+
+// ****
+
+// const ourArray = [];
+// let i = 5;
+
+// do {
+//   ourArray.push(i);
+//   i++;
+// } while (i < 5);
+
+// В коді змініть while цикл на do...while цикл і він висуватиме лише число 10 до myArray, а i буде дорівнювати 11, коли код закінчить роботу.
+
+// const myArray = [];
+// let i = 10;
+
+// do {
+//   myArray.push(i);
+//   i += 1;
+// } while (i <=10);
+
+// console.log(myArray);
+
+// ****
+// Напишіть рекурсивну функцію, sum(arr, n), що повертає суму перших n елементів масиву arr.
+
+// function sum(arr, n) {
+//   if (n <= 0) {
+//     return 0;
+//   } else {
+//     return sum(arr, n - 1) + arr[n - 1];
+//   }
+// }
+
+// console.log(sum([2, 3, 4], 1));
+// console.log(sum([2, 3, 4, 5], 3));
+
+// ****
+// Функція lookUpProfile яка приймає name та властивість (prop) як аргументи були попередньо записані для вас.
+// Функція має перевірити, чи name є фактичним контактом firstName і даний параметр (prop) є властивістю цього контакту.
+// Якщо обидва є правдою, то поверніть "значення" цієї власності.
+// Якщо name не відповідає жодному контакту, поверніть рядок No such contact.
+// Якщо prop не відповідає жодним дійсним властивостям контакту, знайденим за відповідністю name потім поверніться на рядок No such property.
+
+// const contacts = [
+//   {
+//     firstName: "Akira",
+//     lastName: "Laine",
+//     number: "0543236543",
+//     likes: ["Pizza", "Coding", "Brownie Points"],
+//   },
+//   {
+//     firstName: "Harry",
+//     lastName: "Potter",
+//     number: "0994372684",
+//     likes: ["Hogwarts", "Magic", "Hagrid"],
+//   },
+//   {
+//     firstName: "Sherlock",
+//     lastName: "Holmes",
+//     number: "0487345643",
+//     likes: ["Intriguing Cases", "Violin"],
+//   },
+//   {
+//     firstName: "Kristian",
+//     lastName: "Vos",
+//     number: "unknown",
+//     likes: ["JavaScript", "Gaming", "Foxes"],
+//   },
+// ];
+
+// function lookUpProfile(name, prop) {
+//   for (let i = 0; i < contacts.length; i += 1) {
+//     if (contacts[i].firstName === name) {
+//       if (contacts[i].hasOwnProperty(prop)) {
+//         return contacts[i][prop];
+//       } else {
+//         return "No such property";
+//       }
+//     }
+//   }
+//   return "No such contact";
+// }
+
+// console.log(lookUpProfile("Akira", "likes"));
+// console.log(lookUpProfile("Kristian", "lastName"));
+// console.log(lookUpProfile("Sherlock", "likes"));
+// console.log(lookUpProfile("Bob", "number"));
+// console.log(lookUpProfile("Akira", "address"));
+
+// ****
+// Створіть функцію під назвою randomRange, яка займає діапазон myMin і myMax і повертає випадкове ціле число, яке більше або дорівнює myMinі менше або дорівнює myMax, включно.
+
+// function randomRange(myMin, myMax) {
+//   return Math.floor(Math.random() * (myMax - myMin + 1) + myMin);
+// }
+
+// console.log(randomRange(1, 2));
+
+// ****
+// Використовуйте parseInt() у функції convertToInteger, щоб вона конвертувала вхідний рядок str у ціле число та повернула його.
+
+// function convertToInteger(str) {
+//   const value = parseInt(str);
+//   return value;
+// }
+
+// convertToInteger("56");
+
+// ****
+// Використовуйте parseInt() у функції convertToInteger, щоб воно перетворило двійкове число на ціле число і повернуло його.
+
+// function convertToInteger(str) {
+//   return parseInt(str, 2);
+// }
+
+// convertToInteger("10011");
+// console.log(convertToInteger("10011"));
+
+// ****
+// Використовуйте умовний оператор у функції checkEqual, щоб перевірити чи два числа рівні, чи ні. Функція має повернути рядок Equal або рядок Not Equal.
+
+// function checkEqual(a, b) {
+//   return a === b ? "Equal" : "Not Equal";
+// }
+// checkEqual(1, 2);
+// console.log(checkEqual(1, 2));
+
+// ****
+// function findGreaterOrEqual(a, b) {
+//   return a === b
+//     ? "a and b are equal"
+//     : a > b
+//     ? "a is greater"
+//     : "b is greater";
+// }
+
+// У функції checkSign, використовуйте декілька умовних операторів, дотримуючись рекомендованого формату, що використаний у findGreaterOrEqual - для того, щоб перевірити чи число додатнє, від'ємне або нуль. Функція має повернути positive, negative or zero.
+
+// function checkSign(num) {
+//   return num === 0 ? "zero" : num > 0 ? "positive" : "negative";
+// }
+
+// checkSign(10);
+// console.log(checkSign(10));
+
+// ****
