@@ -582,3 +582,56 @@
 // console.log(checkSign(10));
 
 // ****
+// РЕКУРСІЯ
+// function countup(n) {
+//   if (n < 1) {
+//     return [];
+//   } else {
+//     const countArray = countup(n - 1);
+//     countArray.push(n);
+//     return countArray;
+//   }
+// }
+// console.log(countup(5));
+
+// Ми вже визначили функцію під назвою countdown з одним параметром (n). Функція має використовувати рекурсію, щоб повернути масив, який містить цілі числа від n до 1 на основі параметра n. Якщо функція викликається числом меншим за 1, вона має повернути порожній масив. Наприклад, виклик цієї функції зі значенням n = 5 має повернути масив [5, 4, 3, 2, 1]. Ваша функція має використовувати рекурсію шляхом виклику самої себе, але не повинна використовувати ніякі цикли.
+
+// function countdown(n) {
+//   if (n < 1) {
+//     return [];
+//   } else {
+//     const countArray = countdown(n - 1);
+//     countArray.unshift(n);
+//     return countArray;
+//   }
+// }
+
+// function countdown(n) {
+//   return n < 1 ? [] : [n, ...countdown(n - 1)];
+// }
+// console.log(countdown(-1));
+// console.log(countdown(10));
+// console.log(countdown(5));
+
+// ****
+// Ми визначили функцію під назвою rangeOfNumbers з двома параметрами. Функція повинна повернути масив цілих чисел, що починаються з числа, представленого параметром startNum і закінчується числом, яке представлене параметром endNum. Початкове число завжди буде меншим або рівним кінцевому номеру. Ваша функція має використовувати рекурсію, викликаючи сама себе, але не повинна використовувати якісь цикли. Вона також повинна працювати у випадках, колиstartNum і endNum однакові.
+
+// function rangeOfNumbers(startNum, endNum) {
+//   if (endNum < startNum) {
+//     return [];
+//   } else {
+//     const array = rangeOfNumbers(startNum, endNum - 1);
+//     array.push(endNum);
+//     return array;
+//   }
+// }
+
+// function rangeOfNumbers(startNum, endNum) {
+//   return endNum < startNum
+//     ? []
+//     : [...rangeOfNumbers(startNum, endNum - 1), endNum];
+// }
+
+// console.log(rangeOfNumbers(1, 5));
+// console.log(rangeOfNumbers(6, 9));
+// console.log(rangeOfNumbers(4, 4));
